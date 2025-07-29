@@ -54,19 +54,19 @@ const Hero = () => {
           </motion.div>
 
           {/* Info Cards */}
-          <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 max-w-2xl mx-auto">
-            <div className="flex items-center justify-center space-x-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+          <motion.div variants={itemVariants} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-8 max-w-3xl mx-auto">
+            <div className="flex items-center justify-center space-x-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">
               <MapPin className="w-5 h-5 text-blue-500 flex-shrink-0" />
-              <span className="text-sm text-gray-700 dark:text-gray-300">Ярославль, РФ</span>
+              <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">Ярославль, РФ</span>
             </div>
-            <div className="flex items-center justify-center space-x-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+            <div className="flex items-center justify-center space-x-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">
               <Calendar className="w-5 h-5 text-green-500 flex-shrink-0" />
-              <span className="text-sm text-gray-700 dark:text-gray-300">22 года</span>
+              <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">22 года</span>
             </div>
-            <div className="flex items-center justify-center space-x-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+            <div className="flex items-center justify-center space-x-2 p-3 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 sm:col-span-2 md:col-span-1">
               <Mail className="w-5 h-5 text-purple-500 flex-shrink-0" />
-              <span className="text-sm text-gray-700 dark:text-gray-300 hidden sm:inline">rainboowbee@gmail.com</span>
-              <span className="text-sm text-gray-700 dark:text-gray-300 sm:hidden">Email</span>
+              <span className="text-sm text-gray-700 dark:text-gray-300 font-medium hidden sm:inline">rainboowbee@gmail.com</span>
+              <span className="text-sm text-gray-700 dark:text-gray-300 font-medium sm:hidden">Email</span>
             </div>
           </motion.div>
 
@@ -80,9 +80,9 @@ const Hero = () => {
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <motion.a
               href="#contact"
-              className="flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="flex items-center justify-center space-x-2 px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl w-full sm:w-auto"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
               <Mail className="w-5 h-5" />
               <span>Связаться</span>
@@ -92,9 +92,9 @@ const Hero = () => {
               href="https://github.com/rainboowbee"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 px-8 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-semibold hover:border-blue-500 hover:text-blue-500 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-all duration-200"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="flex items-center justify-center space-x-2 px-6 sm:px-8 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-semibold hover:border-blue-500 hover:text-blue-500 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-all duration-200 w-full sm:w-auto"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
               <Github className="w-5 h-5" />
               <span>GitHub</span>

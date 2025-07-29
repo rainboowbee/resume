@@ -59,6 +59,16 @@ const Header = () => {
     { name: 'Контакты', href: '#contact' },
   ]
 
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }
+
   // Не рендерим кнопку переключения темы до монтирования компонента
   if (!isMounted) {
     return (
@@ -120,15 +130,15 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <motion.a
+              <motion.button
                 key={item.name}
-                href={item.href}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                onClick={() => scrollToSection(item.href)}
+                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 bg-transparent border-none cursor-pointer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 {item.name}
-              </motion.a>
+              </motion.button>
             ))}
           </nav>
 
@@ -167,14 +177,16 @@ const Header = () => {
             >
               <nav className="py-4 space-y-2">
                 {navItems.map((item) => (
-                  <a
+                  <button
                     key={item.name}
-                    href={item.href}
-                    className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200"
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={() => {
+                      scrollToSection(item.href)
+                      setIsMenuOpen(false)
+                    }}
+                    className="block w-full text-left px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200 bg-transparent border-none cursor-pointer"
                   >
                     {item.name}
-                  </a>
+                  </button>
                 ))}
               </nav>
             </motion.div>

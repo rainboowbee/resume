@@ -9,15 +9,20 @@ import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Header />
-      <Hero />
-      <About />
-      <Experience />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-    </main>
+    <>
+      <a href="#main-content" className="skip-link">
+        Перейти к основному содержимому
+      </a>
+      <main id="main-content" className="min-h-screen">
+        <Header />
+        <Hero />
+        <About />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
+      </main>
+    </>
   )
 }
